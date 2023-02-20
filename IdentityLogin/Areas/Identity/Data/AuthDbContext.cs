@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityLogin.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,8 @@ namespace IdentityLogin.Data
             : base(options)
         {
         }
+
+        public DbSet<Contato> Contatos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
